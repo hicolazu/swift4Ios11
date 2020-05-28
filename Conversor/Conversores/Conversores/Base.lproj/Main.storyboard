@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="404"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-ej-3YX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-ej-3YX">
                                         <rect key="frame" x="117" y="34" width="180" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
@@ -43,7 +43,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-J1-Cj2">
                                         <rect key="frame" x="36" y="326" width="159" height="59"/>
@@ -60,7 +60,7 @@
                                         <rect key="frame" x="218" y="326" width="159" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                        <state key="normal" title="Farenheit">
+                                        <state key="normal" title="Farenheint">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                         <connections>
@@ -70,14 +70,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.52156862745098043" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-V3-Pqz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-V3-Pqz">
                                 <rect key="frame" x="36" y="486" width="338" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" red="0.25818067789999999" green="0.55439829829999998" blue="0.90494000910000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-YM-Q7Y">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-YM-Q7Y">
                                 <rect key="frame" x="36" y="629" width="338" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
@@ -93,6 +93,7 @@
                         <outlet property="btUnit2" destination="1Ox-Ok-evj" id="SEj-ES-w1s"/>
                         <outlet property="lbResult" destination="E6b-V3-Pqz" id="Ap3-Vg-hkD"/>
                         <outlet property="lbResultUnit" destination="oMP-YM-Q7Y" id="b67-ar-nQo"/>
+                        <outlet property="lbUnit" destination="AKS-ej-3YX" id="OR8-R0-krI"/>
                         <outlet property="tfValue" destination="lMR-WS-OG4" id="3tz-91-WgJ"/>
                     </connections>
                 </viewController>
