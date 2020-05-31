@@ -16,7 +16,7 @@ movies2.insert("Vingadores: Ultimato")
 print(movies2.count)
 
 let result = movies2.insert("Vingadores: Ultimato")
-print("Resultado da inserção: \(result.inserted) \nSet após tentativa de inserção: \(result.memberAfterInserted)")
+print("Resultado da inserção: \(result.inserted) \nSet após tentativa de inserção: \(result.memberAfterInsert)")
 // .inserted: Boolean => false, pois "Vingadores: Ultimato" já existe
 // .memberAfterInserted: Set<String> => set após a tentativa de inserção
 
@@ -45,7 +45,7 @@ let allMovies = movies.union(movies2)
 print("Todos os filmes: \(allMovies)")
 
 // Remoção de Sets
-movies = movies.substracting(movies2)
+movies = movies.subtracting(movies2)
 print("Lista de filmes sem \(movies2) = \(movies)")
 
 // Tupla
