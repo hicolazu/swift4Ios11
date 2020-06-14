@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loteria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top" translatesAutoresizingMaskIntoConstraints="NO" id="FLr-tk-szA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FLr-tk-szA" secondAttribute="height" multiplier="23:9" id="Rwn-Zg-lVh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mega-Sena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pza-Fe-xKA">
+                                <rect key="frame" x="16" y="57" width="382" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fbe-aN-v5W">
+                                <rect key="frame" x="16" y="178" width="382" height="32"/>
+                                <segments>
+                                    <segment title="Mega-Sena"/>
+                                    <segment title="Quina"/>
+                                </segments>
+                                <color key="tintColor" red="0.16470588235294117" green="0.38823529411764707" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="selectedSegmentTintColor" red="0.1647058824" green="0.38823529410000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="generateGame" destination="BYZ-38-t0r" eventType="valueChanged" id="Hmn-1z-jWs"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pW-zZ-G3r">
+                                <rect key="frame" x="16" y="656" width="382" height="50"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.38823529411764707" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WmV-fo-BTV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Gerar Jogo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="HX1-Mn-FZw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="x55-h3-VsO">
+                                <rect key="frame" x="60" y="270" width="294" height="196"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ys5-qg-VzL">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inT-Nc-4YX">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox1-6M-MFK">
+                                                <rect key="frame" x="102" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-2Q-rQv">
+                                                <rect key="frame" x="204" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Ph-hd-DiY">
+                                        <rect key="frame" x="0.0" y="106" width="294" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mes-4u-YRY">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxj-mV-Wy1">
+                                                <rect key="frame" x="102" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmC-Em-Cae">
+                                                <rect key="frame" x="204" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FLr-tk-szA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3zq-Jh-8uC"/>
+                            <constraint firstItem="0pW-zZ-G3r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4k0-5C-YzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pza-Fe-xKA" secondAttribute="trailing" constant="16" id="5Bf-Xn-IO4"/>
+                            <constraint firstItem="pza-Fe-xKA" firstAttribute="centerY" secondItem="FLr-tk-szA" secondAttribute="centerY" id="85K-Rq-QHv"/>
+                            <constraint firstItem="x55-h3-VsO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DAq-aY-ISV"/>
+                            <constraint firstItem="FLr-tk-szA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K4D-Lp-9xZ"/>
+                            <constraint firstItem="Fbe-aN-v5W" firstAttribute="top" secondItem="FLr-tk-szA" secondAttribute="bottom" constant="16" id="OQU-JV-Yml"/>
+                            <constraint firstItem="Fbe-aN-v5W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PNd-aD-G8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0pW-zZ-G3r" secondAttribute="bottom" constant="30" id="YOW-tp-D7o"/>
+                            <constraint firstItem="pza-Fe-xKA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d1g-Wd-Njt"/>
+                            <constraint firstItem="x55-h3-VsO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d45-7g-HgU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0pW-zZ-G3r" secondAttribute="trailing" constant="16" id="ge8-2f-Une"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fbe-aN-v5W" secondAttribute="trailing" constant="16" id="mpV-6h-K8b"/>
+                            <constraint firstItem="FLr-tk-szA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="riJ-AZ-nup"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbGameType" destination="pza-Fe-xKA" id="G2G-uJ-jsU"/>
+                        <outlet property="scGameType" destination="Fbe-aN-v5W" id="gVP-gm-IxJ"/>
+                        <outletCollection property="balls" destination="inT-Nc-4YX" collectionClass="NSMutableArray" id="4WH-g3-LN3"/>
+                        <outletCollection property="balls" destination="ox1-6M-MFK" collectionClass="NSMutableArray" id="O1M-8S-OvJ"/>
+                        <outletCollection property="balls" destination="VXq-2Q-rQv" collectionClass="NSMutableArray" id="j35-9Z-PhZ"/>
+                        <outletCollection property="balls" destination="mes-4u-YRY" collectionClass="NSMutableArray" id="ahx-Fq-JVQ"/>
+                        <outletCollection property="balls" destination="cxj-mV-Wy1" collectionClass="NSMutableArray" id="16f-S7-3RM"/>
+                        <outletCollection property="balls" destination="HmC-Em-Cae" collectionClass="NSMutableArray" id="8dV-Za-GMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball" width="90" height="90"/>
+        <image name="top" width="750" height="295"/>
+    </resources>
+</document>
