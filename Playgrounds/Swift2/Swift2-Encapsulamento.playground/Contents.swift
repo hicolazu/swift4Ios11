@@ -12,7 +12,7 @@ class CreditCard {
         self.limit = limit
     }
     
-    func makePurchase(off value: Double, isInternational: Bool) -> Bool {
+    final func makePurchase(off value: Double, isInternational: Bool) -> Bool {
         let debit = isInternational ? value * (1 + self.iof/100) : value
         let finalValue = invoiceValue + debit
         if finalValue > limit {
