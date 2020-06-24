@@ -77,5 +77,5 @@ person6 = nil
 /  Por isso, o *Reference Count* dos 2 é igual a 1, pois um referência o outro mesmo não estando mais sendo
 / referenciados por um objeto (person5 e person6)
 / Isto gera um Memory Leak (vazamento de memória) -> objetos em memória que nós não podemos manipular
-/ Solucação: anotar a propriedade friend como weak (fraca)
+/ Solucação: anotar a propriedade friend como weak (fraca) -> ARC (como se fosse um Garbage Collector)
 */
